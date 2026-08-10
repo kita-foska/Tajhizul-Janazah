@@ -1689,12 +1689,11 @@ body{
 
 <script id="tajhiz-premium-js">
 (function(){
-  const sections=[...document.querySelectorAll('main section[id], .doc-container section[id], section[id]')];
+  const sections=[...document.querySelectorAll('h1[id], h2[id], h3[id], h4[id]')];
   const unique=[...new Set(sections)];
   const titleOf=s=>{
     if(!s)return'Pendahuluan';
-    const h=s.querySelector('h1,h2,h3,.section-title,.toc-title');
-    return h?h.textContent.replace(/\s+/g,' ').trim().slice(0,55):s.id.replace(/-/g,' ');
+    return s.textContent.replace(/\s+/g,' ').trim().slice(0,55);
   };
   const readText=document.getElementById('tjReadText');
   const progress=document.getElementById('tjProgress');
