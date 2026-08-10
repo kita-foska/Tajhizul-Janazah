@@ -918,8 +918,29 @@ body{
   color:#e8f0eb !important;
 }
 :root .cover h1,
-:root .cover h1 *{
+:root .cover h1 *,
+:root .cover .subtitle,
+:root .cover .pondok{
   color:#ffffff !important;
+}
+/* Root cause of the contrast bugs: --tj-forest/--tj-text/--tj-muted/
+   --tj-emerald are used all over (headings, .tj-current pill, etc.) but
+   were defined ONCE, unconditionally, as fixed dark values — never
+   redefined for dark mode. Fixing the variables fixes every element that
+   uses them, not just the ones caught in screenshots so far. */
+:root[data-theme="dark"]{
+  --tj-forest:#dcebe3;
+  --tj-text:#e8f0eb;
+  --tj-muted:#a9bbb2;
+  --tj-emerald:#8fd6b4;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --tj-forest:#dcebe3;
+    --tj-text:#e8f0eb;
+    --tj-muted:#a9bbb2;
+    --tj-emerald:#8fd6b4;
+  }
 }
 </style>
 
