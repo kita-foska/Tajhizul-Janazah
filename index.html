@@ -104,7 +104,7 @@ body {
   font-family: 'KFGQPC Uthmanic Script HAFS','KFGQPC Uthman Taha Naskh','Traditional Arabic','Scheherazade New',serif;
   direction: rtl;
   unicode-bidi: isolate;
-  font-size: 1.32em;
+  font-size: 1.68em;
   line-height: 2.5;
 }
 .ltr-run {
@@ -295,7 +295,7 @@ li { margin: 0.35em 0; }
   border-left: none;
   border-right: 4px solid var(--gold);
 }
-.quote .ar { font-size: 1.3em; }
+.quote .ar { font-size: 1.6em; }
 
 .translit {
   direction: ltr;
@@ -885,6 +885,16 @@ body{
   color:#e8f0eb!important;
 }
 :root[data-theme="light"] .tj-bottom{
+  background:rgba(255,253,248,.96)!important;
+}
+
+/* Reading-position pill (top-right "Membaca..." indicator) */
+:root[data-theme="dark"] .tj-read{
+  background:rgba(16,42,33,.96)!important;
+  border-color:#315044!important;
+  color:#e8f0eb!important;
+}
+:root[data-theme="light"] .tj-read{
   background:rgba(255,253,248,.96)!important;
 }
 
