@@ -628,6 +628,12 @@ h1,h2,h3,.section-title,.toc-title{
   text-align:justify;
   text-align-last:right;
 }
+p > .ar:only-child,
+li > .ar:only-child{
+  display:block;
+  text-align:center;
+  text-align-last:center;
+}
 
 /* Remove old harsh/dated color accents where common */
 .kop,.subtitle,.badge,.label{
@@ -1603,7 +1609,6 @@ body{
 </footer>
 </div>
 
-<a href="#top" class="top-link" title="Menyang dhuwur">&uarr;</a>
 
 <button class="settings-fab" id="settingsToggle" title="Pengaturan tampilan bacaan" aria-label="Pengaturan tampilan bacaan">&#9881;</button>
 <div class="settings-panel" id="settingsPanel">
