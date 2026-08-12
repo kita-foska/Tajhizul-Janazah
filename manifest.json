@@ -1,6 +1,8 @@
 {
   "name": "Panduan Lengkap Tajhizul Janazah - Al-Ittihad",
   "short_name": "Tajhizul Janazah",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#0b5d3b",
   "theme_color": "#0b5d3b",
